@@ -13,7 +13,6 @@ hero_party = Party()
 heroes = [Swordsman("Alucard"), Archer("Miya"), Wizard("Cyclops"), Healer("Estes")]
 for hero in heroes:
     print(hero_party.add_member(hero))
-turn = 0
 
 boss = BossMonster()
 
