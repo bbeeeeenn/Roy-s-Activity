@@ -9,7 +9,6 @@ def is_anyone_alive(party: Party):
     return any(member.is_alive() for member in party.members)
 
 
-running = True
 hero_party = Party()
 heroes = [Swordsman("Alucard"), Archer("Miya"), Wizard("Cyclops"), Healer("Estes")]
 for hero in heroes:
@@ -18,7 +17,7 @@ turn = 0
 
 boss = BossMonster()
 
-while running:
+while True:
     print("\n")
     for hero in hero_party.members:
         if isinstance(hero, Healer):
@@ -27,7 +26,6 @@ while running:
             print(hero.attack(boss))
 
         if not boss.is_alive():
-            running = False
             print("The boss has been defeated!")
             break
     if not boss.is_alive():
